@@ -157,6 +157,7 @@ main {
   margin: 5rem auto;
 }
 .loading {
+  margin-top: 30vh;
   text-align: center;
 }
 .title {
