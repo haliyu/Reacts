@@ -4,16 +4,23 @@ import Tours from './Tours'
 // ATTENTION!!!!!!!!!!
 // I SWITCHED TO PERMANENT DOMAIN
 const url = 'https://course-api.com/react-tours-project'
+
 function App() {
-  const [tours, setTours] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [tours, setTours] = useState([]);
+
+  const removetour = (id)=>{
+      const newtour = tours.filter((tour)=> tour.id !== id);
+      setTours(newtour);
+  }
+  
   const fetchtour = async ()=>{
     setLoading(true)
       try {
           const response = await fetch(url);
-          const tours = response.json();
+          const tours = await response.json();
+          setLoading(false);
           setTours(tours);
-          setLoading(false)
       } catch (error) {
           console.log(error);
           setLoading(false)
@@ -26,14 +33,29 @@ function App() {
 
   if (loading) {
     return(
-      <Loading />
+      <main>
+         <Loading />
+      </main>
     )
   }
 
-
-  return <>
-      <Tours tours={tours} />
-  </>
+  if (tours.length === 0) {
+    return(
+      <main>
+        <div className='title'>
+          <h2>no tours left</h2>
+          <button className="btn" onClick={()=>{fetchtour()}}>
+            Refresh
+          </button>
+        </div>
+      </main>
+    )
+  }
+  return(
+      <main>
+          <Tours tours={tours} removetour={removetour} />
+      </main>
+  )
 }
 
 export default App
