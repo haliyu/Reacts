@@ -208,6 +208,7 @@ main {
   padding-left: 0.25rem;
 }
 .tour-price {
+  font-weight: bold;
   color: var(--clr-primary-5);
   background: var(--clr-primary-10);
   padding: 0.25rem 0.5rem;
