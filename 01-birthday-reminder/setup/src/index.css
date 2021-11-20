@@ -156,7 +156,7 @@ main {
 }
 .person {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto;
   column-gap: 0.75rem;
   margin-bottom: 1.5rem;
   align-items: center;
@@ -188,4 +188,16 @@ main {
   border-radius: var(--radius);
   outline: 1px solid rgba(242, 138, 178, 0.8);
   cursor: pointer;
+}
+
+#btn{
+  background-color: transparent;
+  outline: transparent;
+  color: #fa6ea4;
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+#btn:hover{
+  color: #c7044b;
+
 }
