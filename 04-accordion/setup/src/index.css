@@ -21,7 +21,7 @@ Variables
   /* darkest grey - used for headings */
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-3: #FFC2C2;
   --clr-grey-4: hsl(209, 28%, 39%);
   /* grey used for paragraphs */
   --clr-grey-5: hsl(210, 22%, 49%);
@@ -30,10 +30,10 @@ Variables
   --clr-grey-8: hsl(210, 31%, 80%);
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
-  --clr-white: #fff;
+  --clr-white: #290149;
   --clr-purple: #261C2C;
   --clr-red-special: #b4345c;
-  --clr-grey-special: #eae6eb;
+  --clr-grey-special: #FFC2C2;
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-green-dark: hsl(125, 67%, 44%);
@@ -160,6 +160,7 @@ main {
   max-width: var(--fixed-width);
   display: grid;
   gap: 1rem 2rem;
+  color: #FFD880;
 }
 .container h3 {
   line-height: 1.2;
